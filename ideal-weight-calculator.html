@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideal Weight Calculator | Healthy Weight Estimate | FitCalcHub</title>
+  <meta name="description" content="Use FitCalcHub's Ideal Weight Calculator to estimate a healthy reference weight from height, gender, and unit selection. Learn how ideal weight formulas are used.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fitcalculatorhub.com/ideal-weight-calculator.html">
+  <meta property="og:title" content="Ideal Weight Calculator | FitCalcHub">
+  <meta property="og:description" content="Estimate your ideal reference weight with height and gender inputs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fitcalculatorhub.com/ideal-weight-calculator.html">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page page--calculator page--ideal-weight">
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="FitCalcHub home">FitCalcHub</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="main-nav nav-primary" aria-label="Primary navigation">
+        <ul class="nav-primary__list">
+          <li class="nav-primary__item"><a class="nav-primary__link" href="index.html">Home</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="bmi-calculator.html">BMI</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="calorie-calculator.html">Calories</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="bmr-calculator.html">BMR</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="body-fat-calculator.html">Body Fat</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="ideal-weight-calculator.html" aria-current="page">Ideal Weight</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content" id="main-content">
+    <section class="page-hero" aria-labelledby="ideal-weight-page-title">
+      <div class="container">
+        <h1 id="ideal-weight-page-title">Ideal Weight Calculator</h1>
+        <p>Estimate a healthy reference weight using your gender and height. This tool is designed for general wellness planning and not for diagnosis.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ideal-weight-calculator-title">
+      <div class="container">
+        <article class="calculator-box">
+          <h2 id="ideal-weight-calculator-title">Calculate Your Ideal Weight</h2>
+          <p id="ideal-weight-form-help" class="section-intro">Choose your preferred unit system, enter your details, and get a practical reference estimate.</p>
+
+          <form id="ideal-weight-form" class="calculator-form" aria-describedby="ideal-weight-form-help ideal-weight-disclaimer" novalidate>
+            <fieldset>
+              <legend class="u-text-muted">Ideal weight input fields</legend>
+              <div class="form-grid">
+                <div>
+                  <label for="iw-unit">Unit system</label>
+                  <select id="iw-unit" name="iw-unit">
+                    <option value="metric" selected>Metric (cm, kg)</option>
+                    <option value="imperial">Imperial (in, lb)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iw-sex">Gender</label>
+                  <select id="iw-sex" name="iw-sex" required>
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="iw-height">Height</label>
+                  <input id="iw-height" name="iw-height" type="number" min="120" max="230" step="0.1" placeholder="Example: 175" inputmode="decimal" required aria-describedby="iw-height-help">
+                  <p id="iw-height-help" class="u-text-muted">Metric mode: enter height in centimeters.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="home-hero__actions">
+              <button class="btn btn-primary" type="submit" id="ideal-weight-submit">Calculate Ideal Weight</button>
+            </div>
+
+            <section class="result" aria-labelledby="ideal-weight-result-title" aria-live="polite">
+              <h3 id="ideal-weight-result-title">Your result</h3>
+              <output id="ideal-weight-result">Your ideal weight estimate will appear here after calculation.</output>
+            </section>
+          </form>
+
+          <p id="ideal-weight-disclaimer" class="u-text-muted">Disclaimer: Ideal weight formulas provide general estimates and do not replace medical advice or individual clinical assessment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section surface" aria-labelledby="ideal-weight-guide-title">
+      <div class="container">
+        <h2 id="ideal-weight-guide-title">Understanding Ideal Weight Estimates</h2>
+        <div class="content-box">
+          <h3>What does ideal weight mean?</h3>
+          <p>Ideal weight is a reference estimate based on population-level formulas. It can help guide goals, but it does not define overall health on its own.</p>
+
+          <h3>How is ideal weight estimated?</h3>
+          <p>Most calculators apply established formulas using height and gender to produce a target reference value or range.</p>
+
+          <h3>How should you use this result?</h3>
+          <ul class="feature-list">
+            <li>Use it as a planning reference, not as a strict requirement.</li>
+            <li>Combine it with BMI, body fat, and performance goals.</li>
+            <li>Consider personal factors like muscle mass and body frame.</li>
+            <li>Track progress with sustainable nutrition and training habits.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ideal-weight-faq-title">
+      <div class="container">
+        <h2 id="ideal-weight-faq-title">Ideal Weight Calculator FAQ</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Is ideal weight the same for everyone of the same height?</h3>
+            <p>No. People with the same height can have different healthy weights depending on body composition and frame.</p>
+          </article>
+          <article class="card">
+            <h3>Should I treat ideal weight as an exact goal?</h3>
+            <p>It is better used as a reference point. Real-world goals should include health markers and lifestyle factors.</p>
+          </article>
+          <article class="card">
+            <h3>Can athletes be healthy outside ideal weight estimates?</h3>
+            <p>Yes. Higher muscle mass can shift body weight while still reflecting strong health and performance.</p>
+          </article>
+          <article class="card">
+            <h3>How often should I check ideal weight?</h3>
+            <p>Checking periodically is enough. Most users update only when their body measurements or goals change.</p>
+          </article>
+          <article class="card">
+            <h3>Is this calculator a medical tool?</h3>
+            <p>No. It is for educational and planning use, and it does not provide diagnosis or treatment guidance.</p>
+          </article>
+          <article class="card">
+            <h3>What should I use with ideal weight for better context?</h3>
+            <p>Pair this estimate with BMI, body fat, activity level, and nutrition consistency for a broader view.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface" aria-labelledby="related-calculators-title">
+      <div class="container">
+        <h2 id="related-calculators-title">Related Calculators</h2>
+        <div class="card-grid">
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">BMI Calculator</h3>
+            <p class="calculator-card__text">Check your BMI category using height and weight.</p>
+            <a class="calculator-card__link" href="bmi-calculator.html">Go to BMI Calculator</a>
+          </article>
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">Calorie Calculator</h3>
+            <p class="calculator-card__text">Estimate daily maintenance calories with activity level.</p>
+            <a class="calculator-card__link" href="calorie-calculator.html">Go to Calorie Calculator</a>
+          </article>
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">BMR Calculator</h3>
+            <p class="calculator-card__text">Estimate your baseline daily calorie burn at rest.</p>
+            <a class="calculator-card__link" href="bmr-calculator.html">Go to BMR Calculator</a>
+          </article>
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">Body Fat Calculator</h3>
+            <p class="calculator-card__text">Estimate body fat percentage from body measurements.</p>
+            <a class="calculator-card__link" href="body-fat-calculator.html">Go to Body Fat Calculator</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">&copy; 2026 FitCalcHub. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="about.html">About</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="privacy-policy.html">Privacy Policy</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator | Body Mass Index Checker | FitCalcHub</title>
+  <meta name="description" content="Use FitCalcHub's BMI Calculator to check your Body Mass Index from height and weight. Understand BMI categories, formula basics, and related health calculators.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fitcalculatorhub.com/bmi-calculator.html">
+  <meta property="og:title" content="BMI Calculator | FitCalcHub">
+  <meta property="og:description" content="Calculate your Body Mass Index quickly and understand standard BMI categories.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fitcalculatorhub.com/bmi-calculator.html">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page page--calculator page--bmi">
+  <header class="site-header" role="banner">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="FitCalcHub home">FitCalcHub</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="main-nav nav-primary" aria-label="Primary navigation">
+        <ul class="nav-primary__list">
+          <li class="nav-primary__item"><a class="nav-primary__link" href="index.html">Home</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="bmi-calculator.html" aria-current="page">BMI</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="calorie-calculator.html">Calories</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="bmr-calculator.html">BMR</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="body-fat-calculator.html">Body Fat</a></li>
+          <li class="nav-primary__item"><a class="nav-primary__link" href="ideal-weight-calculator.html">Ideal Weight</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content" id="main-content">
+    <section class="page-hero" aria-labelledby="bmi-page-title">
+      <div class="container">
+        <h1 id="bmi-page-title">BMI Calculator</h1>
+        <p>Check your Body Mass Index (BMI) with a simple height and weight input. This tool is designed for general screening only and is not a medical diagnosis.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="bmi-calculator-title">
+      <div class="container">
+        <article class="calculator-box">
+          <h2 id="bmi-calculator-title">Calculate Your BMI</h2>
+          <p id="bmi-form-help" class="section-intro">Enter your measurements carefully. Metric mode is fully supported now; imperial mode will be added soon.</p>
+
+          <form id="bmi-form" class="calculator-form" aria-describedby="bmi-form-help bmi-disclaimer" novalidate>
+            <fieldset>
+              <legend class="u-text-muted">BMI input fields</legend>
+              <div class="form-grid">
+                <div>
+                <label for="bmi-unit">Unit system</label>
+                  <select id="bmi-unit" name="bmi-unit">
+                    <option value="metric" selected>Metric (cm, kg)</option>
+                    <option value="imperial">Imperial (in, lb)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="bmi-height">Height</label>
+                  <input id="bmi-height" name="bmi-height" type="number" min="80" max="272" step="0.1" placeholder="Example: 175" inputmode="decimal" required aria-describedby="bmi-height-help">
+                  <p id="bmi-height-help" class="u-text-muted">Metric mode: enter height in centimeters.</p>
+                </div>
+                <div>
+                  <label for="bmi-weight">Weight</label>
+                  <input id="bmi-weight" name="bmi-weight" type="number" min="20" max="500" step="0.1" placeholder="Example: 70" inputmode="decimal" required aria-describedby="bmi-weight-help">
+                  <p id="bmi-weight-help" class="u-text-muted">Metric mode: enter weight in kilograms.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="home-hero__actions">
+              <button class="btn btn-primary" type="submit" id="bmi-submit">Calculate BMI</button>
+            </div>
+
+            <section class="result" aria-labelledby="bmi-result-title" aria-live="polite">
+              <h3 id="bmi-result-title">Your result</h3>
+              <output id="bmi-result">Your BMI result will appear here after calculation.</output>
+            </section>
+          </form>
+
+          <p id="bmi-disclaimer" class="u-text-muted">Disclaimer: BMI is a general screening tool and does not replace medical advice, diagnosis, or treatment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section surface" aria-labelledby="bmi-guide-title">
+      <div class="container">
+        <h2 id="bmi-guide-title">Understanding BMI</h2>
+        <div class="content-box">
+          <h3>What is BMI?</h3>
+          <p>Body Mass Index (BMI) is a ratio between weight and height. It is commonly used as a screening indicator for adult weight categories.</p>
+
+          <h3>How is BMI calculated?</h3>
+          <p>Metric formula: BMI = weight (kg) / (height in meters)^2.</p>
+          <p>Imperial formula: BMI = 703 x weight (lb) / (height in inches)^2.</p>
+
+          <h3>Standard BMI ranges</h3>
+          <ul class="feature-list">
+            <li>Underweight: below 18.5</li>
+            <li>Normal weight: 18.5 to 24.9</li>
+            <li>Overweight: 25.0 to 29.9</li>
+            <li>Obesity: 30.0 and above</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="bmi-faq-title">
+      <div class="container">
+        <h2 id="bmi-faq-title">BMI Calculator FAQ</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>What is a healthy BMI range?</h3>
+            <p>For most adults, a BMI between 18.5 and 24.9 is generally categorized as normal weight.</p>
+          </article>
+          <article class="card">
+            <h3>Is BMI accurate for everyone?</h3>
+            <p>BMI is useful for screening, but it does not directly measure body fat, muscle mass, or fat distribution.</p>
+          </article>
+          <article class="card">
+            <h3>Can athletes have a high BMI?</h3>
+            <p>Yes. People with higher muscle mass can have a higher BMI while still having a healthy body composition.</p>
+          </article>
+          <article class="card">
+            <h3>Should BMI be used as a medical diagnosis?</h3>
+            <p>No. BMI is a screening metric. Clinical decisions should include medical history and professional evaluation.</p>
+          </article>
+          <article class="card">
+            <h3>How often should I check BMI?</h3>
+            <p>Checking every few weeks or monthly is usually enough for general progress tracking.</p>
+          </article>
+          <article class="card">
+            <h3>What should I track with BMI for better context?</h3>
+            <p>Pair BMI with waist measurements, body fat estimates, and activity or nutrition habits for a more complete picture.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface" aria-labelledby="related-calculators-title">
+      <div class="container">
+        <h2 id="related-calculators-title">Related Calculators</h2>
+        <div class="card-grid">
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">Calorie Calculator</h3>
+            <p class="calculator-card__text">Estimate your daily calorie needs by activity level.</p>
+            <a class="calculator-card__link" href="calorie-calculator.html">Go to Calorie Calculator</a>
+          </article>
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">BMR Calculator</h3>
+            <p class="calculator-card__text">Calculate your basal metabolic rate for planning nutrition.</p>
+            <a class="calculator-card__link" href="bmr-calculator.html">Go to BMR Calculator</a>
+          </article>
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">Body Fat Calculator</h3>
+            <p class="calculator-card__text">Estimate body fat percentage from body measurements.</p>
+            <a class="calculator-card__link" href="body-fat-calculator.html">Go to Body Fat Calculator</a>
+          </article>
+          <article class="card calculator-card">
+            <h3 class="calculator-card__title">Ideal Weight Calculator</h3>
+            <p class="calculator-card__text">Explore healthy reference weight ranges based on height.</p>
+            <a class="calculator-card__link" href="ideal-weight-calculator.html">Go to Ideal Weight Calculator</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">&copy; 2026 FitCalcHub. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="about.html">About</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="privacy-policy.html">Privacy Policy</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

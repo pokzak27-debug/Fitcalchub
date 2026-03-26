@@ -330,7 +330,7 @@ ul {
   border: 1px dashed #9fb0ca;
   border-radius: var(--radius-md);
   /* Reserve space so late-loading ad iframes don't cause CLS */
-  min-height: 280px;
+  min-height: 320px;
   display: grid;
   place-items: center;
   text-align: center;
@@ -513,6 +513,6 @@ textarea {
   }
 
   .ad-slot {
-    min-height: 160px;
+    min-height: 220px;
   }
 }

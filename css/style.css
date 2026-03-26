@@ -329,12 +329,14 @@ ul {
 .ad-slot {
   border: 1px dashed #9fb0ca;
   border-radius: var(--radius-md);
-  min-height: 120px;
+  /* Reserve space so late-loading ad iframes don't cause CLS */
+  min-height: 280px;
   display: grid;
   place-items: center;
   text-align: center;
   background: #f7faff;
   color: var(--color-muted);
+  overflow: hidden;
 }
 
 .site-footer {
@@ -508,5 +510,9 @@ textarea {
 
   .site-footer__inner {
     align-items: flex-start;
+  }
+
+  .ad-slot {
+    min-height: 160px;
   }
 }

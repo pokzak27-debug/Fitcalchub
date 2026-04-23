@@ -511,6 +511,36 @@
     });
   }
 
+  function initContactForm() {
+    const contactForm = qs("#contact-form");
+    const resultField = qs("#contact-result");
+    const nameField = qs("#contact-name");
+    const emailField = qs("#contact-email");
+    const messageField = qs("#contact-message");
+
+    if (!contactForm || !resultField || !nameField || !emailField || !messageField) return;
+
+    on(contactForm, "submit", (event) => {
+      event.preventDefault();
+
+      const name = nameField.value.trim();
+      const email = emailField.value.trim();
+      const message = messageField.value.trim();
+
+      if (!name || !email || !message) {
+        setOutput(resultField, "Please complete name, email, and message before submitting.", "error");
+        return;
+      }
+
+      const subject = encodeURIComponent(`FitCalculatorHub contact from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      const mailtoUrl = `mailto:contact@fitcalculatorhub.com?subject=${subject}&body=${body}`;
+
+      setOutput(resultField, "Opening your email app with a prefilled draft...", "success");
+      window.location.href = mailtoUrl;
+    });
+  }
+
   function init() {
     initGlobalInteractions();
     initBmiCalculator();
@@ -518,6 +548,7 @@
     initBmrCalculator();
     initIdealWeightCalculator();
     initBodyFatCalculator();
+    initContactForm();
 
     /*
       Future BMAD calculator modules:

@@ -1,2 +1,1 @@
-# Replace pub-0000000000000000 with your real AdSense Publisher ID before launch
-google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-7502486843743422, DIRECT, f08c47fec0942fa0

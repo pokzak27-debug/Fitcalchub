@@ -11,10 +11,7 @@
   --color-danger: #b42318;
   --radius-sm: 10px;
   --radius-md: 14px;
-  --radius-lg: 18px;
-  --shadow-soft: 0 8px 24px rgba(18, 35, 63, 0.07);
-  --shadow-card: 0 10px 30px rgba(18, 35, 63, 0.08);
-  --space-2xs: 0.25rem;
+  --shadow-card: 0 6px 18px rgba(18, 35, 63, 0.07);
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
   --space-md: 1rem;
@@ -42,11 +39,9 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background: var(--color-bg);
-  text-rendering: optimizeLegibility;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
 }
@@ -62,24 +57,15 @@ a:hover {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   margin: 0 0 var(--space-sm);
   line-height: 1.25;
   color: var(--color-text);
 }
 
-h1 {
-  font-size: clamp(1.95rem, 3.9vw, 2.7rem);
-}
-
-h2 {
-  font-size: clamp(1.45rem, 3vw, 2rem);
-}
-
-h3 {
-  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
-}
+h1 { font-size: clamp(1.95rem, 3.9vw, 2.7rem); }
+h2 { font-size: clamp(1.45rem, 3vw, 2rem); }
+h3 { font-size: clamp(1.1rem, 2.2vw, 1.3rem); }
 
 p {
   margin: 0 0 var(--space-md);
@@ -116,14 +102,6 @@ ul {
 
 .u-text-muted {
   color: var(--color-muted);
-}
-
-.u-shadow-soft {
-  box-shadow: var(--shadow-soft);
-}
-
-.u-rounded-md {
-  border-radius: var(--radius-md);
 }
 
 .site-header {
@@ -241,7 +219,7 @@ ul {
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
 }
 
 .btn:hover {
@@ -269,14 +247,12 @@ ul {
   background: #f8fbff;
 }
 
-.calculator-hub__grid,
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
 }
 
-.calculator-card,
 .card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -329,8 +305,7 @@ ul {
 .ad-slot {
   border: 1px dashed #9fb0ca;
   border-radius: var(--radius-md);
-  /* Reserve space so late-loading ad iframes don't cause CLS */
-  min-height: 460px;
+  min-height: 320px;
   display: grid;
   place-items: center;
   text-align: center;
@@ -438,19 +413,8 @@ textarea {
   font-size: 1.08rem;
 }
 
-.status-ok {
-  color: var(--color-success);
-}
-
-.status-error {
-  color: var(--color-danger);
-}
-
-@media (max-width: 1024px) {
-  .hero {
-    padding-block: var(--space-2xl) var(--space-xl);
-  }
-}
+.status-ok { color: var(--color-success); }
+.status-error { color: var(--color-danger); }
 
 @media (max-width: 840px) {
   .menu-toggle {
@@ -487,6 +451,10 @@ textarea {
 
   .section {
     padding-block: var(--space-xl);
+  }
+
+  .hero {
+    padding-block: var(--space-2xl) var(--space-xl);
   }
 }
 
